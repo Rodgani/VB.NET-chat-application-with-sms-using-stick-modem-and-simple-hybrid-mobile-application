@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A8A7C3D-97DB-4BB0-925C-CA1C079F9597}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SAD_Admin.My.MyApplication</StartupObject>
+    <RootNamespace>SAD_Admin</RootNamespace>
+    <AssemblyName>SAD_Admin</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SAD_Admin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SAD_Admin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>photo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.52\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\..\..\Downloads\Frameworks\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\..\Downloads\Frameworks\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Log" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WebKitBrowser">
+      <HintPath>..\..\..\..\..\..\SAD BROWSER\WebKit.NET-0.5-bin-cairo\bin\WebKitBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="connection.vb" />
+    <Compile Include="admin.Designer.vb">
+      <DependentUpon>admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coords.Designer.vb">
+      <DependentUpon>Coords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Coords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eemp.Designer.vb">
+      <DependentUpon>Eemp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Eemp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="googlemap.Designer.vb">
+      <DependentUpon>googlemap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="googlemap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Head.Designer.vb">
+      <DependentUpon>Head.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Head.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="image_dp.Designer.vb">
+      <DependentUpon>image_dp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="image_dp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="notifmessage.Designer.vb">
+      <DependentUpon>notifmessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="notifmessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pmform.Designer.vb">
+      <DependentUpon>pmform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pmform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recep.Designer.vb">
+      <DependentUpon>recep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMS.Designer.vb">
+      <DependentUpon>SMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WHERE TO GO.Designer.vb">
+      <DependentUpon>WHERE TO GO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WHERE TO GO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coords.resx">
+      <DependentUpon>Coords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eemp.resx">
+      <DependentUpon>Eemp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="googlemap.resx">
+      <DependentUpon>googlemap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Head.resx">
+      <DependentUpon>Head.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="image_dp.resx">
+      <DependentUpon>image_dp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notifmessage.resx">
+      <DependentUpon>notifmessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pmform.resx">
+      <DependentUpon>pmform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recep.resx">
+      <DependentUpon>recep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMS.resx">
+      <DependentUpon>SMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WHERE TO GO.resx">
+      <DependentUpon>WHERE TO GO.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="photo.ico" />
+    <None Include="Resources\Worldwide Location_48px.png" />
+    <None Include="Resources\Worldwide Location_48px31.png" />
+    <None Include="Resources\Marker_48px3.png" />
+    <None Include="Resources\Marker_48px1.png" />
+    <None Include="Resources\Employee Card_48px1.png" />
+    <None Include="Resources\5f05284e4d194164364aef34c711b8e3.jpg" />
+    <None Include="Resources\Marker_48px.png" />
+    <None Include="Resources\Worldwide Location_48px3.png" />
+    <None Include="Resources\cande1.png" />
+    <None Include="Resources\cande.png" />
+    <None Include="Resources\Naruto SMS Cute Voice Text Alert Tone Ringtone.wav" />
+    <None Include="Resources\Cancel_96px.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Edit Property_48px2.png" />
+    <None Include="Resources\Edit Property_48px.png" />
+    <None Include="Resources\Add User Male_48px.png" />
+    <None Include="Resources\Add User Male_48px2.png" />
+    <None Include="Resources\Delete_48px.png" />
+    <None Include="Resources\Delete_48px2.png" />
+    <None Include="Resources\Power-512.png" />
+    <None Include="Resources\Settings_48px2.png" />
+    <None Include="Resources\Settings_48px.png" />
+    <None Include="Resources\Note_48px.png" />
+    <None Include="Resources\Note_48px2.png" />
+    <None Include="Resources\Employee Card_48px.png" />
+    <None Include="Resources\Employee Card_48px2.png" />
+    <None Include="Resources\Message Filled_48px.png" />
+    <None Include="Resources\Message Filled_48px2.png" />
+    <None Include="Resources\Business Contact_48px.png" />
+    <None Include="Resources\Business Contact_48px2.png" />
+    <None Include="Resources\Home_48px2.png" />
+    <None Include="Resources\Home_48px.png" />
+    <None Include="Resources\Home_100px.png" />
+    <None Include="Resources\Xperia-Red-Lollipop-Wallpapers.jpg" />
+    <None Include="Resources\admin.png" />
+    <None Include="Resources\Android-L-Material-Design-Wallpapers-14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

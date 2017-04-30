@@ -1,0 +1,7 @@
+var lt = Number(Apperyio("lat").text());
+
+var lng = Number(Apperyio("long").text());
+
+var ID = Number(Apperyio("ID").text());
+
+Apperyio("coordinates").text(ID+": "+lt + "," + lng);
